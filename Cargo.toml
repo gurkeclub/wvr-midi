@@ -9,4 +9,3 @@ midir = "0.5"
 wmidi = "4.0"
 anyhow = "1.0"
 wvr-data = {git = "https://github.com/gurkeclub/wvr-data.git", branch="main"}
-wvr-io = {git = "https://github.com/gurkeclub/wvr-io.git", branch="main"}

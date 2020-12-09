@@ -6,7 +6,7 @@ use anyhow::Result;
 use midir::{Ignore, MidiInput};
 
 use wvr_data::DataHolder;
-use wvr_io::InputProvider;
+use wvr_data::InputProvider;
 
 pub struct MidiProvider {
     name: String,

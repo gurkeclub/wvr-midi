@@ -5,7 +5,7 @@ use std::time::Instant;
 use midir::{Ignore, MidiInput};
 
 use wvr_data::DataHolder;
-use wvr_io::InputProvider;
+use wvr_data::InputProvider;
 
 pub struct DjP8Provider {
     _port: midir::MidiInputConnection<()>,
