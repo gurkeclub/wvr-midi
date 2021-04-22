@@ -72,6 +72,10 @@ impl MidiProvider {
 }
 
 impl InputProvider for MidiProvider {
+    fn set_name(&mut self, name: &str) {
+        self.name = name.to_owned();
+    }
+    
     fn provides(&self) -> Vec<String> {
         vec![
             format!("{:}.pressed", self.name),

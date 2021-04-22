@@ -117,6 +117,8 @@ impl DjP8Provider {
 }
 
 impl InputProvider for DjP8Provider {
+    fn set_name(&mut self, name: &str) {}
+
     fn provides(&self) -> Vec<String> {
         vec![
             "left_bpm".into(),
