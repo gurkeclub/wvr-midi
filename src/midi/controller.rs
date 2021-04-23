@@ -75,7 +75,7 @@ impl InputProvider for MidiProvider {
     fn set_name(&mut self, name: &str) {
         self.name = name.to_owned();
     }
-    
+
     fn provides(&self) -> Vec<String> {
         vec![
             format!("{:}.pressed", self.name),
@@ -83,6 +83,8 @@ impl InputProvider for MidiProvider {
             format!("{:}.values", self.name),
         ]
     }
+
+    fn set_property(&mut self, property: &str, value: &DataHolder) {}
 
     fn get(&mut self, uniform_name: &str, _invalidate: bool) -> Option<DataHolder> {
         while let Ok(message) = self.midi_input_channel.try_recv() {

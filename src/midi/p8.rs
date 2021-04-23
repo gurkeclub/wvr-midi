@@ -148,6 +148,8 @@ impl InputProvider for DjP8Provider {
         ]
     }
 
+    fn set_property(&mut self, property: &str, value: &DataHolder) {}
+
     fn get(&mut self, uniform_name: &str, _invalidate: bool) -> Option<DataHolder> {
         if let Some(last_left_sync_press) = self.last_left_sync_press {
             if last_left_sync_press.elapsed().as_secs() > 2 {
