@@ -4,8 +4,8 @@ use std::time::Instant;
 
 use midir::{Ignore, MidiInput};
 
-use wvr_data::DataHolder;
-use wvr_data::InputProvider;
+use wvr_data::types::DataHolder;
+use wvr_data::types::InputProvider;
 
 pub struct DjP8Provider {
     _port: midir::MidiInputConnection<()>,
@@ -117,7 +117,7 @@ impl DjP8Provider {
 }
 
 impl InputProvider for DjP8Provider {
-    fn set_name(&mut self, name: &str) {}
+    fn set_name(&mut self, _name: &str) {}
 
     fn provides(&self) -> Vec<String> {
         vec![
@@ -148,7 +148,7 @@ impl InputProvider for DjP8Provider {
         ]
     }
 
-    fn set_property(&mut self, property: &str, value: &DataHolder) {}
+    fn set_property(&mut self, _property: &str, _value: &DataHolder) {}
 
     fn get(&mut self, uniform_name: &str, _invalidate: bool) -> Option<DataHolder> {
         if let Some(last_left_sync_press) = self.last_left_sync_press {
